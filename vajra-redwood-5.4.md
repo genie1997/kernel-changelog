@@ -12,6 +12,16 @@ Linux 5.4.302, built on the Scarlet base with Neutron Clang 24.
 
 ---
 
+## 3.2 — 10 October 2026
+
+- Works with the KernelSU-Next 3.4.1 manager, and needs it: the 3.4.0 manager asks for an update and
+  modules stay off until it is replaced. Update the manager and open it once before flashing; if the
+  kernel went on first, one more reboot brings the modules back.
+- Module service scripts start once per boot, even on ROMs that reach that stage twice.
+- SELinux fixes in the root code: a second ioctl permission for an existing rule is now merged in
+  instead of being dropped, and removing a rule keeps the policy size exact.
+- Same SuSFS 2.3.0. The manager shows the kernel side as v3.4.0-legacy (33305); that is expected.
+
 ## 3.1 — 4 October 2026
 
 - Trimmed the SELinux footprint further — the root domain dropped an unused rule and narrowed another.
