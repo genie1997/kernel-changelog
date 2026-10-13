@@ -12,6 +12,26 @@ Linux 5.4.302, built on the Scarlet base with Neutron Clang 24.
 
 ---
 
+## 4.0 — 14 October 2026
+
+- f2fs, fscrypt and fs-verity updated to the android12-5.4 level, with fixes up to 2025. f2fs takes the
+  storage options newer Android sets and the GC pacing controls its idle maintenance uses.
+- Camera: fixed a memory leak that kept growing while the camera was open, plus Qualcomm camera driver
+  fixes for out-of-bounds reads, use-after-free and races.
+- Qualcomm fixes from newer releases for audio (concurrent recording, compressed playback), video,
+  Wi-Fi, mobile data, UFS and the Bluetooth UART.
+- Fixes for binder use-after-free, a Bluetooth crash on suspend, a hotword session leak and mobile
+  data control messages sent with the wrong field size.
+- WireGuard: the fixes from mainline that apply to 5.4.
+- Touch: the report rate and game mode settings are sent to the panel again when the screen turns on.
+- Touch: a gesture with the screen off no longer keeps the phone from going to sleep.
+- Root: network connections opened as root are no longer refused.
+- Works with the KernelSU-Next 3.4.2 manager. The 3.4.1 manager keeps working too, and there is no
+  install order this time.
+- Root: the new manager option to give the shell root only from an adb session (off by default) now
+  works, and the SELinux policy size reported after root rules are added is exact.
+- Same SuSFS 2.3.0. The manager shows the kernel side as v3.4.0-legacy (33309); that is expected.
+
 ## 3.2 — 10 October 2026
 
 - Works with the KernelSU-Next 3.4.1 manager, and needs it: the 3.4.0 manager asks for an update and
