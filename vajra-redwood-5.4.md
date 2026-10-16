@@ -12,6 +12,18 @@ Linux 5.4.302, built on the Scarlet base with Neutron Clang 24.
 
 ---
 
+## 4.1 — 16 October 2026
+
+- Far fewer CPU wakeups while the phone is idle, with the screen on or off.
+- Scheduler: a light task now takes an idle little core before an idle big one, and false
+  throttle readings no longer push light tasks to the big cores.
+- Wakeup reasons are recorded for battery stats, including wakes from the modem and the DSP.
+- Vibration and audio no longer flood the kernel log.
+- Fixes for binder, input and HID, USB (audio and tethering included), ext4, timers, cpufreq,
+  workqueues, cgroups and memory management.
+- Networking fixes for IPv4, IPv6, TCP, netfilter and IPsec.
+- Use the [KernelSU-Next 3.4.2 manager](https://github.com/KernelSU-Next/KernelSU-Next/releases/download/v3.4.2/KernelSU_Next_v3.4.2_33355-release.apk).
+
 ## 4.0 — 14 October 2026
 
 - f2fs, fscrypt and fs-verity updated to the android12-5.4 level, with fixes up to 2025. f2fs takes the
