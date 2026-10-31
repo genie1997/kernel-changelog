@@ -8,8 +8,20 @@ Linux 6.12.92 on Google's android16-6.12 common kernel, Android clang 19.0.1.
 | Codenames | `redwood`, `redwoodin` |
 | Defconfig | `redwood_defconfig` |
 | Root | any manager with GKI support |
+| Source | [android_kernel_xiaomi_redwood-6.12](https://github.com/genie1997/android_kernel_xiaomi_redwood-6.12) |
 
 ---
+
+## 1.2 — 31 October 2026
+
+- NFC support.
+- IR blaster works.
+- A Wi-Fi firmware crash no longer takes the whole phone down.
+- Scheduler: CASS task placement by Sultan Alsawaf as a vendor module, with the core scheduler left
+  as Google ships it. Short background work stays on idle little cores instead of waking the big ones.
+- The CPUs start on schedutil from boot, so a boot script that fails can no longer leave a cluster at
+  full speed until the next reboot.
+- The prime core no longer jumps to its top clock for every real-time thread.
 
 ## 1.1 — 30 October 2026
 
